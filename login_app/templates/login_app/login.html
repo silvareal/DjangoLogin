@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% extends 'login_app/base.html ' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+</head>
+<body>
+{% block title %}login{% endblock %}
+
+{% block content %}
+<h2>login</h2>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">login</button>
+{% endblock %}
+</form>
+
+</body>
+</html>

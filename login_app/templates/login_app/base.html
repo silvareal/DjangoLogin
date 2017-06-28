@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}DJANGO LOGIN{% endblock %}</title>
+</head>
+<body>
+<header style="'background-color: grey;">
+    <h1>DJANGO SIMPLE LOGIN</h1>
+    {% if user.is_authenticated %}
+    Hi{{ user.username }}
+    <a href="{% url 'login_app:logout' %}">logout</a>
+    {% else %}
+    <a href="{% url 'login_app:login' %}">login</a>
+    {% endif %}
+</header>
+<hr>
+<main>
+{% block content %}
+{% endblock %}
+</main>
+<hr>
+<footer> @2017 silvablaze.inc :)</footer>
+</body>
+</html>

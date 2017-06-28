@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% extends 'login_app/base.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>logout</title>
+</head>
+<body>
+{% block title %}See you!{% endblock %}
+
+{% block content %}
+<h2>log out</h2>
+<p>you have successfully logged out :(</p>
+<p><a href="{% url 'login_app:login' %}">login again :)</a> </p>
+{% endblock %}
+</body>
+</html>
